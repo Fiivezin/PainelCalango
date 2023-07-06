@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta htt-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Emissão de Garantia</title>
+    <link rel="stylesheet" href="garantiamain.css">
+
+</head>
+
+<body>
+
+    <div class="dados">
+        <img src="./img/Fundo FB Calango.png" width="450">
+        <br/> <br />
+
+        <h4>Cliente: </h4><br/>
+        <input type="text" id="cliente" /> <br /><br />
+
+        <h4>Vendedor(a): </h4><br/>
+        <input type="text" id="vendedor" /> <br /><br />
+
+        <h4>Aparelho:</h4> <br/>
+        <input type="text" id="aparelho" /> <br /><br />
+
+        <h4>Armazenamento (GB):</h4><br />
+        <input type="text" id="armazenamento" /> <br /><br />
+
+        <h4>Cor:</h4> <br/>
+        <input type="text" id="cor" /> <br /><br />
+
+        <h4>Valor R$: </h4><br/>
+        <input type="number" step="0,01" id="valor" /> <br /><br />
+
+        <h4>Garantia de: </h4><br/>
+        <input type="number" id="vencimento" /> <br  /> <br /><br />
+
+        <a href onclick="gerarGarantia()" class="BUTTON_TRS">IMPRIMIR</a>
+        <br/>
+        <br/>
+        <br/>
+        
+
+    </div>
+    
+    <div class="print">
+        <img src="./img/Fundo FB Calango.png" width="650">
+
+         <p>Cliente: <span id="garantia_cliente"></span></p>
+         <br/>
+         <p>Vendedor(a): <span id="garantia_vendedor"></span></p>
+         <br/>
+         <p>Aparelho: <span id="garantia_aparelho"></span></p>
+         <br/>
+         <p>Armazenamento (GB): <span id="garantia_armazenamento"></span><GB> </p>
+         <br/>
+         <p>Cor: <span id="garantia_cor"></span></p>
+         <br/>
+         <p>Valor R$: <span id="garantia_valor">0,00</span></p>
+         <br/>
+         <p>Data: <span id="garantia_data"></span></p>
+         <br/>
+         <p>Garantia de: <span id="garantia_vencimento"></span> dias</p>
+         <br/>
+
+         <p>
+Termo de Garantia
+<br/>
+Este termo de garantia estabelece os direitos e responsabilidades entre a empresa Calango iPhones e o proprietário do celular adquirido. Leia atentamente as cláusulas a seguir:
+<br/>
+1. Duração da Garantia
+<br/>
+   1.1. A garantia deste celular terá validade por 90 (noventa) dias a partir da data da compra.
+<br/>
+2. Cobertura da Garantia
+<br/>
+   2.1. A garantia cobre exclusivamente defeitos de fabricação do aparelho celular adquirido.
+   <br/>
+   2.2. Caso seja identificado um defeito de fabricação dentro do período de garantia, a empresa Calango iPhones se responsabiliza pelo Aparelho.
+<br/>
+3. Prazo para Troca
+<br/>
+   3.1. A solicitação de troca do aparelho deve ser feita no prazo máximo de 7 (sete) dias corridos, contados a partir da data da compra.
+   <br/>
+   3.2. A empresa Calango iPhones reserva-se o direito de solicitar a apresentação do comprovante de compra para efetuar a troca.
+   <br/>
+
+4. Limitações e Exclusões
+<br/>
+   4.1. Esta garantia não cobre danos causados por mau uso, acidentes, negligência, tentativas de reparo não autorizadas, alterações ou modificações no aparelho.
+   <br/>
+   4.2. A garantia também não abrange desgaste natural, danos causados por líquidos, quedas, exposição a temperaturas extremas ou outras circunstâncias além do controle da empresa Calango iPhones.
+<br/>
+Ao adquirir este celular, o proprietário concorda em cumprir todas as cláusulas estabelecidas neste termo de garantia.
+            </p>
+
+    </div>
+
+    <script>
+        function gerarGarantia() {
+            document.getElementById('garantia_cliente').innerHTML = document.getElementById('cliente').value;
+            document.getElementById('garantia_vendedor').innerHTML = document.getElementById('vendedor').value;
+            document.getElementById('garantia_aparelho').innerHTML = document.getElementById('aparelho').value;
+            document.getElementById('garantia_armazenamento').innerHTML = document.getElementById('armazenamento').value;
+            document.getElementById('garantia_cor').innerHTML = document.getElementById('cor').value;
+            document.getElementById('garantia_valor').innerHTML = parseFloat(document.getElementById('valor').value).toLocaleString('pt-br', {minimumFractionDigits: 2});
+            document.getElementById('garantia_data').innerHTML = dataAtual();
+            document.getElementById('garantia_vencimento').innerHTML = document.getElementById('vencimento').value;
+            window.print();
+        }
+        function dataAtual() {
+            let data = new Date();
+            return data.getDate() + "/0" + (data.getMonth()+1) + "/" + data.getFullYear();
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta htt-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Emissão de Garantia</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <div class="dados">
+        <h1>Emissor de Garantia Wolfset de Produtos</h1>
+        <br/>
+        <h2>Cliente: </h2><br/>
+        <input type="text" id="cliente" /> <br /><br />
+        <h2>Vendedor(a): </h2><br/>
+        <input type="text" id="vendedor" /> <br /><br />
+        <h2>Produto:</h2> <br/>
+        <input type="text" id="aparelho" /> <br /><br />
+        <h2>Valor R$: </h2><br/>
+        <input type="number" step="0,01" id="valor" /> <br /><br />
+        <h2>Garantia de: </h2><br/>
+        <input type="number" id="vencimento" /> <br  /><br />
+        <button onclick="gerarGarantia()">Gerar Garantia</button>  
+        <br/>   
+        <br/> 
+        <br/> 
+        <br/> 
+        <br/> 
+        <div class="fiive">by FiiveElements</div>
+    </div>
+
+    <div class="print">
+         <div class="imagem">
+            <img src="./LOGO CALANGO BRANCA Fundo Free.png" width="100">
+        <h1>Garantia Calango iPhones</h1>
+        <br/>
+         <p>Cliente: <span id="garantia_cliente"></span></p>
+         <br/>
+         <p>Vendedor(a): <span id="garantia_vendedor"></span></p>
+         <br/>
+         <h3>Produto: <span id="garantia_aparelho"></span></h3>
+         <br/>
+         <p>Valor R$: <span id="garantia_valor">0,00</span></p>
+         <br/>
+         <p>Data: <span id="garantia_data"></span></p>
+         <br/>
+         <p>Garantia de: <span id="garantia_vencimento"></span> dias</p>
+         <br/>
+
+         <p>Ao comprar um novo produto, possivelmente, você já deve ter se questionado se aquele item tem garantia. Não precisa quebrar muito a cabeça, a resposta é simples: o direito existe.
+
+Há pelo menos três modalidades de garantia que asseguram a qualidade, eficiência e durabilidade do produto, a legal, a contratual e a estendida.
+
+A garantia legal é estabelecida pelo CDC (Código de Defesa do Consumidor) e independe de previsão em contrato. A lei garante e ponto. Assim, você tem 30 dias para reclamar de problemas com o produto se ele não for durável (um alimento, por exemplo), ou 90 dias se for durável (uma máquina de lavar, por exemplo). O prazo começa a contar a partir do recebimento do produto.
+
+O que muita gente não sabe é que, no caso de um vício oculto - aquele defeito que só se mostra depois de um certo tempo de uso do produto -, o prazo da garantia legal começa a contar a partir do momento em que esse defeito é constatado.
+
+A garantia contratual, entretanto, é a que o fabricante ou fornecedor acrescenta a seu produto de livre e espontânea vontade, ou seja, nem todo item terá esse tipo de seguro. Sua vigência começa a partir da data de emissão da nota fiscal, com o prazo e condições impostas pela empresa - normalmente estabelecida no "termo de garantia".
+
+O Código de Defesa do Consumidor dispõe que a garantia contratual é complementar a legal. Desse modo, fique atento para os prazos da garantia contratual, pois para os produtos duráveis (eletroeletrônicos e etc.) geralmente é de 9 meses ou 1 ano. Se for de 09 meses, o consumidor terá 1 ano para acionar a garantia em caso de defeitos, pois é feita a soma da garantia contratual com a legal de 03 meses ou 90 dias.
+
+Já a garantia estendida, normalmente oferecida pelas lojas com termos como "super garantia", é contratada a parte. Normalmente, é oferecida por uma outra empresa, que não tem relação com o fabricante e se trata de um seguro contra defeitos do produto. 
+
+Dentro desse tipo de garantia, há ainda três modalidades: a original, cuja cobertura é igual ao seguro contratual realizado pelo fabricante, mas você tem algum benefício, por exemplo, a troca imediata do produto; a ampliada, que o tempo é somado à garantia original do fabricante; e a diferenciada, na qual você também tem benefícios, mas o tempo de seguro é menor do que a estendida original.
+
+Antes de contratar qualquer tipo de garantia estendida, peça para ler a apólice e verifique aquilo que de fato será coberto por este tipo de garantia, assim como aquilo que não estará coberto.
+
+Em geral, não vale a pena pagar pela garantia estendida, a não ser quando o contrato oferecer alguma vantagem de fato. Antes de optar por ela, é recomendável se informar sobre a modalidade do seguro e solicitar uma cópia do contrato ou apólice, analisando-a com cuidado.
+
+Troca 
+De acordo com o artigo 18 do CDC, o fornecedor e o fabricante têm 30 dias, a partir da reclamação, para sanar o problema do produto. Extrapolado esse prazo, você pode exigir uma das alternativas previstas no  artigo 18 do CDC: um produto similar, a restituição imediata da quantia paga ou o abatimento proporcional do preço. Contudo, o período de um mês não deve ser estipulado em caso de se tratar de produto essencial com defeito - como uma geladeira, por exemplo -, pois troca nesses casos deve ser imediata.
+ 
+Garantia após o reparo
+Ao retirar o produto consertado, é recomendável que você teste se ele está funcionando bem e peça sempre a nota fiscal discriminando os serviços realizados. Independentemente de haver um termo por escrito, o reparo tem garantia legal de três meses.
+
+Se nesse período o produto apresentar o mesmo problema ou algum outro decorrente do reparo, entende-se que o serviço foi mal prestado e, assim, o cliente tem direito de exigir a reexecução dos serviços sem custo adicional ou uma das alternativas previstas no CDC.
+
+Já se o produto estiver dentro da garantia contratual, o prazo continua o mesmo. Ou seja, se uma mercadoria com garantia de um ano apresentou defeito aos sete meses de uso e retornou para você em um mês, restará apenas quatro meses de seguro.
+
+Entretanto, se o item foi trocado e mesmo assim apresente o mesmo ou outros defeitos em tempo menor do que a sua vida útil, a troca poderá ocorrer, pois o prazo de garantia legal e contratual deve ser contado a partir da data em que o novo artigo foi entregue.
+            </p>
+
+         <br /><br />
+         <br/>
+         <br/>
+         <div class="assinatura">Assinatura</div>
+    </div>
+
+    <script>
+        function gerarGarantia() {
+            document.getElementById('garantia_cliente').innerHTML = document.getElementById('cliente').value;
+            document.getElementById('garantia_vendedor').innerHTML = document.getElementById('vendedor').value;
+            document.getElementById('garantia_aparelho').innerHTML = document.getElementById('aparelho').value;
+            document.getElementById('garantia_valor').innerHTML = parseFloat(document.getElementById('valor').value).toLocaleString('pt-br', {minimumFractionDigits: 2});
+            document.getElementById('garantia_data').innerHTML = dataAtual();
+            document.getElementById('garantia_vencimento').innerHTML = document.getElementById('vencimento').value;
+            window.print();
+        }
+        function dataAtual() {
+            let data = new Date();
+            return data.getDate() + "/0" + (data.getMonth()+1) + "/" + data.getFullYear();
+        }
+
+    </script>
+</body>
+</html>
